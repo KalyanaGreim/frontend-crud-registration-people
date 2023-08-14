@@ -1,0 +1,75 @@
+input,
+select,
+textarea {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 12px 9px 8px;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #6b7280;
+  margin-right: 10px;
+}
+.title-page {
+  color: #7eae93;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem;
+  margin-bottom: 20px;
+}
+label {
+  margin-top: 10px;
+}
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+button {
+  border: none;
+  display: flex;
+  padding: 10px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.add-contato-btn {
+  background-color: rgb(95, 126, 160);
+}
+.add-pessoa-btn {
+  background-color: #7eae93;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.btn-voltar {
+  background: none;
+  margin-top: 0%;
+}
+input.ng-invalid {
+  border: 1px solid red;
+  background-color: #ffeeee;
+}
+
+input.editable-label.ng-invalid {
+  border: 1px solid red;
+  background-color: #ffeeee;
+  border-radius: 4px;
+}
+
+select.ng-invalid {
+  border: 1px solid red;
+  background-color: #ffeeee;
+}
+
+textarea.ng-invalid {
+  border: 1px solid red;
+  background-color: #ffeeee;
+}
