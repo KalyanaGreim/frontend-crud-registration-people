@@ -1,0 +1,38 @@
+.title-page {
+  color: #7eae93;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem;
+  margin-bottom: 20px;
+}
+button {
+  border: none;
+  padding: 10px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-contato-btn {
+  background-color: rgb(95, 126, 160);
+}
+.pessoa-list {
+  list-style: none;
+  padding: 20px;
+}
+.btn-mostrar-contatos {
+  background-color: #7eae93;
+  margin: 5px;
+}
+.btn-editar-contatos {
+  background-color: #dd813a;
+  margin: 5px;
+
+}
+.btn-remover-contatos {
+  background-color: #ff0000;
+  margin: 5px;
+
+}

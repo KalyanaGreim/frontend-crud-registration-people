@@ -1,0 +1,34 @@
+<div style="display: grid; padding: 10%">
+  <div
+    style="display: flex; justify-content: space-between; align-items: center"
+  >
+    <div class="title-page">Lista de Pessoas</div>
+    <button routerLink="/create" class="add-contato-btn">Registrar</button>
+  </div>
+  <ul>
+    <li *ngFor="let pessoa of pessoas" class="pessoa-list">
+      <div style="display: grid; grid-template-columns: 70% 10% 10% 10%;">
+        <div style="display: grid">
+          <div style="font-weight: 700; font-family: Montserrat;font-size: 24px;">
+            {{ pessoa.nome }}
+          </div>
+          <div>{{ pessoa.cpf }}</div>
+        </div>
+        <button
+          (click)="exibirDetalhesPessoa(pessoa.id)"
+          class="btn-mostrar-contatos"
+        >
+          Exibir Contatos
+        </button>
+        <button (click)="editar(pessoa.id)" class="btn-editar-contatos">Editar</button>
+        <button (click)="excluir(pessoa.id)" class="btn-remover-contatos">Remover</button>
+      </div>
+      <div *ngIf="detalhesVisiveis[pessoa.id]">
+        <div *ngFor="let contato of pessoa.contatos" style="margin-left: 20px">
+          <div>Email: {{ contato.email }}</div>
+          <div>Telefone: {{ contato.telefone }}</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
