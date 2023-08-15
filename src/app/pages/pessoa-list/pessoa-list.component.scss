@@ -17,22 +17,33 @@ button {
 }
 .add-contato-btn {
   background-color: rgb(95, 126, 160);
+  width: 150px;
 }
 .pessoa-list {
   list-style: none;
   padding: 20px;
+  border-radius: 4px;
+  background-color: rgb(242, 242, 209);
+  margin:10px 0;
 }
 .btn-mostrar-contatos {
   background-color: #7eae93;
   margin: 5px;
 }
 .btn-editar-contatos {
-  background-color: #dd813a;
+  background-color: #d0a07b;
   margin: 5px;
 
 }
 .btn-remover-contatos {
-  background-color: #ff0000;
+  background-color: #de4c4c;
   margin: 5px;
 
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.btn-pagination {
+  background-color: rgb(95, 126, 160);
 }

@@ -9,6 +9,9 @@ import { PessoaService } from 'src/app/service/pessoa.service';
 })
 export class PessoaListComponent {
   pessoas?: any[];
+  currentPage = 1;
+  pageSize = 5;
+  totalPages = 0;
 
   constructor(private pessoaService: PessoaService, private router: Router) {}
 
@@ -17,10 +20,25 @@ export class PessoaListComponent {
   }
 
   getAllPessoas(): void {
-    this.pessoaService.getAllPessoas().subscribe((pessoas) => {
-      this.pessoas = pessoas;
+    this.pessoaService.getAllPessoas(this.currentPage, this.pageSize).subscribe((pessoas) => {
+      this.pessoas = pessoas.content;
+      this.totalPages = pessoas.totalPages;
     });
   }
+
+  nextPage(): void {
+    this.currentPage++;
+    this.getAllPessoas();
+  }
+
+  previousPage(): void {
+    if (this.currentPage > 0) {
+      this.currentPage--;
+      this.getAllPessoas();
+    }
+  }
+
+
   detalhesVisiveis: { [key: number]: boolean } = {};
   exibirDetalhesPessoa(id: number): void {
     if (this.detalhesVisiveis[id] === undefined) {
@@ -51,4 +69,6 @@ export class PessoaListComponent {
       );
     }
   }
+
+
 }
