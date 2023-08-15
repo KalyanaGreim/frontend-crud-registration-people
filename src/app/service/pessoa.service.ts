@@ -12,8 +12,9 @@ export class PessoaService {
 
   constructor(private http: HttpClient) { }
 
-  getAllPessoas(): Observable<any> {
-    return this.http.get(this.baseUrl);
+  getAllPessoas(page: number, size: number): Observable<any> {
+    const params = { page: page.toString(), size: size.toString() };
+    return this.http.get(this.baseUrl, { params });
   }
 
   getPessoaById(id: number): Observable<any> {
