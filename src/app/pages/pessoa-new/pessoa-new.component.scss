@@ -48,6 +48,9 @@ button {
   background-color: #7eae93;
   margin-left: 10px;
   margin-right: 10px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
 }
 .btn-voltar {
   background: none;
@@ -72,4 +75,10 @@ select.ng-invalid {
 textarea.ng-invalid {
   border: 1px solid red;
   background-color: #ffeeee;
+}
+.container-form {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 4px 60px 4px 60px;
+  background-color: beige;
 }
